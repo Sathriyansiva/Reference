@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:title="Chart" />
+
+        <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text="Weight"
+                            android:textColor="#121111"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/chart"
+                            android:paddingTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp" />
+
+                        <TextView
+                            android:id="@+id/tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text="BMI"
+                            android:textColor="#121111"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/chart1"
+                            android:paddingTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </ScrollView>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/shitstuff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginTop="-24dp"
+                android:paddingTop="40dp"
+                app:itemTextColor="@color/black"
+
+                app:menu="@menu/hwdraw" />
+
+
+        </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
+</LinearLayout>
